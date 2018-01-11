@@ -1,0 +1,29 @@
+[
+  {
+    "schools": {
+      "list": [
+        "Interactive College of Technology",
+        "FEU - Insitute of Technology",
+        "National University of Computer and Emerging Sciences"
+      ]
+    }
+  },
+  {
+    "programs": {
+      "list": [
+        "Program in Human Centered Computing - Clemson University",
+        "Multidisciplinary Program in Human Computer Interaction - Georgia Tech",
+        "Program in Human Computer Interaction - Iowa State University",
+        "MS Program in Human Computer Interaction - Tufts University"
+      ]
+    }
+  },
+  {
+    "articles": {
+      "list": [
+        "Know More About the Human-Computer Interaction Institute of Carnegie Mellon University",
+        "Human Centred Design and its Career Paths"
+      ]
+    }
+  }
+]

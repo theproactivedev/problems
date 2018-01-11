@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/npm/now-ui-kit@1.1.0/assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/npm/now-ui-kit@1.1.0/assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>SchoolApply Engineering</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" />
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0-beta.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/now-ui-kit@1.1.0/assets/css/now-ui-kit.min.css" />
+  <!--  Social tags      -->
+  <meta name="keywords" content="SchoolApply, School Apply, IT Technology, IT Architecture, Development, Engineering, Open Source">
+  <meta name="description" content="SchoolApply helps students from anywhere in the world connect with great educational programs and schools abroad that best match their needs and potential. We also run a rather amazing litte tech team and play around with fun technologies.">
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="SchoolApply Engineering">
+  <meta itemprop="description" content="SchoolApply helps students from anywhere in the world connect with great educational programs and schools abroad that best match their needs and potential. We also run a rather amazing litte tech team and play around with fun technologies.">
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@school_apply">
+  <meta name="twitter:title" content="SchoolApply Engineering">
+  <meta name="twitter:description" content="SchoolApply helps students from anywhere in the world connect with great educational programs and schools abroad that best match their needs and potential. We also run a rather amazing litte tech team and play around with fun technologies.">
+  <!-- Open Graph data -->
+  <meta property="og:title" content="SchoolApply Engineering">
+  <meta property="og:description" content="SchoolApply helps students from anywhere in the world connect with great educational programs and schools abroad that best match their needs and potential. We also run a rather amazing litte tech team and play around with fun technologies.">
+  <meta property="og:url" content="https://schoolapply.github.io/">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light my-0">
+      <div class="container">
+        <a class="navbar-brand text-dark" href="#">
+          <strong>SCHOOLAPPLY</strong>
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+          <form class="form-inline my-2 my-lg-0 d-block d-sm-flex" id="searchForm">
+            <span class="btn btn-link border-0 d-none d-sm-block">
+              <span><i class="fa fa-search" id="searchIcon" aria-hidden="true"></i></span>
+            </span>
+
+            <input class="form-control mr-sm-2 border-0" type="search" name="searchField" placeholder="SEARCH..." aria-label="Search" id="search">
+
+            <button type="button" class="close float-right d-none" id="closeIcon" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </form>
+
+          <ul class="navbar-nav justify-content-end" id="navList">
+            <li class="nav-item active">
+              <a class="nav-link text-dark font-weight-normal" href="#">SCHOOLS <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark font-weight-normal" href="#">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark font-weight-normal" href="#">CONTACT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark font-weight-normal" href="#">PROFILE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark btn btn-default btn-simple" href="#">NEED HELP APPLYING</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.2.1,npm/popper.js@1.12.9,npm/bootstrap@4.0.0-beta.2/dist/js/bootstrap.min.js,npm/bootstrap-datepicker@1.7.1,npm/moment@2.20.1,npm/eonasdan-bootstrap-datetimepicker@4.17.47,npm/bootstrap-select@1.12.4,npm/bootstrap-switch@3.3.4,npm/bootstrap-tagsinput@0.7.1,npm/jasny-bootstrap@3.1.3/dist/js/jasny-bootstrap.min.js,npm/nouislider@10.1.0/distribute/nouislider.min.js,npm/now-ui-kit@1.1.0/assets/js/now-ui-kit.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    var searchField = $("#search");
+    var closeIcon = $("#closeIcon");
+
+    function changeProperties(properties) {
+      document.getElementById("searchForm").className = properties.searchForm;
+      document.getElementById("navList").className = properties.navList;
+      document.getElementById("closeIcon").className = properties.closeIcon;
+      document.getElementsByName("searchField")[0].placeholder = properties.placeholder;
+    }
+
+    function hideNav() {
+      changeProperties({
+        searchForm: "input-group my-2 my-lg-0",
+        navList: "d-none",
+        closeIcon: "close float-right d-inline-block",
+        placeholder: "SEARCH FOR SCHOOLS, PROGRAMS OR LOCATIONS..."
+      });
+    }
+
+    function showNav() {
+      changeProperties({
+        searchForm: "form-inline my-2 my-lg-0",
+        navList: "navbar-nav justify-content-end",
+        closeIcon: "d-none",
+        placeholder: "SEARCH..."
+      });
+      searchField.val("");
+      $("#results").html("");
+    }
+
+    searchField.on("click", hideNav);
+    closeIcon.on("click", showNav);
+  });
+</script>
+
+</html>
